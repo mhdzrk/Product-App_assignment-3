@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<div class="card-header" style="display: inline-flex;width: 100%;">
+    <div>
+        <a routerLink="/" style="margin: 10px;">Products</a>
+        <a routerLink="/add" style="margin: 10px;">Add New Product</a>
+    </div>    
+    <div style="margin-left: 70%;text-align: right;align-items: flex-end;">
+        <a *ngIf="!prlist.loggedIn()" routerLink="/login" style="margin: 10px;">Login</a>
+        <a *ngIf="!prlist.loggedIn()" routerLink="/register" style="margin: 10px;">Signup</a>
+        <button *ngIf="prlist.loggedIn()" class="btn btn-primary" (click)="prlist.logOut()">Logout</button>
+    </div>
+    
+
+</div>
